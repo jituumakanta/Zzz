@@ -35,7 +35,7 @@ public class seven extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        Toast.makeText(getActivity(), "one", Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(), "Trending", Toast.LENGTH_LONG).show();
         View view = inflater.inflate(R.layout.fragment_one, container, false);
         recyclerView0 = (RecyclerView) view.findViewById(R.id.recyclerView1);
         recyclerView0.setHasFixedSize(true);

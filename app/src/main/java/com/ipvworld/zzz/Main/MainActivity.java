@@ -17,11 +17,11 @@ import android.view.MenuItem;
 
 import com.ipvworld.zzz.NewsTabs.five;
 import com.ipvworld.zzz.NewsTabs.four;
-import com.ipvworld.zzz.NewsTabs.one;
+import com.ipvworld.zzz.NewsTabs.Trending;
 import com.ipvworld.zzz.NewsTabs.seven;
 import com.ipvworld.zzz.NewsTabs.six;
 import com.ipvworld.zzz.NewsTabs.three;
-import com.ipvworld.zzz.NewsTabs.two;
+import com.ipvworld.zzz.NewsTabs.Movie;
 import com.ipvworld.zzz.R;
 
 public class MainActivity extends AppCompatActivity
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity
             //return PlaceholderFragment.newInstance(position + 1);
             switch (position) {
                 case 0:
-                    return new one();
+                    return new Trending();
                 case 1:
                     return new seven();
                 case 2:
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity
                 case 5:
                     return new six();
                 case 6:
-                    return new two();
+                    return new Movie();
             }
             return null;
         }
@@ -172,9 +172,9 @@ public class MainActivity extends AppCompatActivity
                 case 4:
                     return "World";
                 case 5:
-                    return "Movie";
-                case 6:
                     return "Entertainment";
+                case 6:
+                    return "Movie";
 
             }
             return null;

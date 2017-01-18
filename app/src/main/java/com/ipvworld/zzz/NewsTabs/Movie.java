@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class two extends Fragment {
+public class Movie extends Fragment {
 
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager0;

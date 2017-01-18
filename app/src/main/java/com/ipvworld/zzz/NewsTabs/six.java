@@ -8,11 +8,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.ipvworld.zzz.Adapter.CardAdapter1;
 import com.ipvworld.zzz.Adapter.CardAdapter2;
 import com.ipvworld.zzz.LayoutDesign.DividerItemDecoration;
 import com.ipvworld.zzz.BeanClass.ListItem;
@@ -32,121 +34,196 @@ import java.util.List;
  */
 public class six extends Fragment {
 
-    RecyclerView recyclerView;
+    RecyclerView recyclerView0;
     RecyclerView.LayoutManager layoutManager0;
-    RecyclerView.Adapter adapter;
-    List<ListItem> listTrndingNewsData9;
-    //  ProgressDialog uploading;
-    private int requestCount = 1;
+    RecyclerView.Adapter adapter0;
+    List<ListItem> listTrndingNewsData0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_six, container, false);
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView6);
-        recyclerView.setHasFixedSize(true);
+        Toast.makeText(getActivity(), "Trending", Toast.LENGTH_LONG).show();
+        View view = inflater.inflate(R.layout.fragment_one, container, false);
+        recyclerView0 = (RecyclerView) view.findViewById(R.id.recyclerView1);
+        recyclerView0.setHasFixedSize(true);
+
         layoutManager0 = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager0);
-        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL));
-        listTrndingNewsData9 = new ArrayList<>();
+        recyclerView0.setLayoutManager(layoutManager0);
+        recyclerView0.addItemDecoration(new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL));
 
-        getData();
-        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                super.onScrolled(recyclerView, dx, dy);
-                if (isLastItemDisplaying(recyclerView)) {
-                    getData();
-                    //  Toast.makeText(getActivity(), "jitu", Toast.LENGTH_LONG).show();
-
-                }
-            }
-        });
-
-
+        listTrndingNewsData0 = new ArrayList<>();
+        getTrndingNews0();
         return view;
+
     }
 
-    private JsonObjectRequest getofferNews(int requestCount) {
-        //final ProgressBar progressBar = (ProgressBar) getActivity().findViewById(R.id.progressBar2);
-
-        //Displaying Progressbar
-        // progressBar.setVisibility(View.VISIBLE);
-        String url5 = "http://hellohelps.com/HelloHelps/getMovieNews.php?page=";
-        String url = url5 + String.valueOf(requestCount);
-        JsonObjectRequest jsObjRequest5 = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+    public void getTrndingNews0() {
+        //uploading = ProgressDialog.show(getActivity(), "Loading", "Please wait...", false, false);
+        String url5 = "https://newsapi.org/v1/articles?source=ars-technica&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest5 = new JsonObjectRequest(Request.Method.GET, url5, null, new Response.Listener<JSONObject>() {
             JSONObject o;
 
             @Override
             public void onResponse(JSONObject response) {
                 o = response;
-                praseJsonNewsData9(o);
-                // Toast.makeText(getActivity(), "hihihihi", Toast.LENGTH_LONG).show();
-                //  progressBar.setVisibility(View.GONE);
+                praseJsonNewsData0(o);
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
             }
         }, new Response.ErrorListener() {
 
             @Override
             public void onErrorResponse(VolleyError error) {
                 // TODO Auto-generated method stub
-                //  progressBar.setVisibility(View.GONE);
+
             }
         });
-        //MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest5);
-        return jsObjRequest5;
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest5);
+
+        String url1 = "https://newsapi.org/v1/articles?source=national-geographic&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest1 = new JsonObjectRequest(Request.Method.GET, url1, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest1);
+
+        String url3 = "https://newsapi.org/v1/articles?source=reddit-r-all&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest3 = new JsonObjectRequest(Request.Method.GET, url3, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest3);
+
+        String url4 = "https://newsapi.org/v1/articles?source=the-lad-bible&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest4 = new JsonObjectRequest(Request.Method.GET, url4, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest4);
+
+        String url6 = "https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest6 = new JsonObjectRequest(Request.Method.GET, url6, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest6);
+
+        String url7 = "https://newsapi.org/v1/articles?source=wired-de&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest7 = new JsonObjectRequest(Request.Method.GET, url7, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest7);
+
 
     }
 
-    public void praseJsonNewsData9(JSONObject o) {
+    public void praseJsonNewsData0(JSONObject o) {
         JSONObject jj = o;
         JSONArray rr;
         JSONObject jjj;
         ListItem lt3;
 
         try {
-
+            String statuss = jj.getString("status");
+            String sourcee = jj.getString("source");
+            String sortBy = jj.getString("sortBy");
             // converting object to array
             rr = jj.getJSONArray("articles");
 
             for (int i = 0; i < rr.length(); i++) {
                 lt3 = new ListItem();
                 jjj = rr.getJSONObject(i);
-                String source = jjj.getString("source");
-                String title = jjj.getString("title");
-                String description = jjj.getString("description");
-                String imageUrl = jjj.getString("image");
-                String publishedAt = jjj.getString("time");
+                String authorr = jjj.getString("author");
+                String titlee = jjj.getString("title");
+                String descriptionn = jjj.getString("description");
+                String urll = jjj.getString("url");
+                String urlToImagee = jjj.getString("urlToImage");
+                String publishedAtt = jjj.getString("publishedAt");
 
-                lt3.setSource(source);
-                lt3.setTitle(title);
-                lt3.setDescription(description);
-                lt3.setImageUrl(imageUrl);
-                lt3.setPublishedAt(publishedAt);
-                listTrndingNewsData9.add(lt3);
+                lt3.setAuthor(authorr);
+                lt3.setTitle(titlee);
+                lt3.setDescription(descriptionn);
+                lt3.setUral(urll);
+                lt3.seturlToImage(urlToImagee);
+                lt3.setpPublishedAt(publishedAtt);
+                lt3.setSouce(sourcee);
+                listTrndingNewsData0.add(lt3);
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        adapter = new CardAdapter2(listTrndingNewsData9, getActivity());
-        recyclerView.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
-    }
-
-    private void getData() {
-        //Adding the method to the queue by calling the method getDataFromServer
-        // requestQueue.add(getDataFromServer(requestCount));
-        MySingleton.getInstance(getActivity()).addToRequestQueue(getofferNews(requestCount));
-
-        //Incrementing the request counter
-        requestCount++;
-    }
-
-    private boolean isLastItemDisplaying(RecyclerView recyclerView) {
-        if (recyclerView.getAdapter().getItemCount() != 0) {
-            int lastVisibleItemPosition = ((LinearLayoutManager) recyclerView.getLayoutManager()).findLastCompletelyVisibleItemPosition();
-            if (lastVisibleItemPosition != RecyclerView.NO_POSITION && lastVisibleItemPosition == recyclerView.getAdapter().getItemCount() - 1)
-                return true;
-        }
-        return false;
+        adapter0 = new CardAdapter1(listTrndingNewsData0, getActivity());
+        recyclerView0.setAdapter(adapter0);
+        //uploading.dismiss();
     }
 
 }
