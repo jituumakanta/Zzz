@@ -1,15 +1,18 @@
 package com.ipvworld.zzz.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 import com.ipvworld.zzz.BeanClass.ListItem;
+import com.ipvworld.zzz.Description.Desc;
 import com.ipvworld.zzz.Main.MySingleton;
 import com.ipvworld.zzz.R;
 
@@ -32,7 +35,7 @@ public class CardAdapter1 extends RecyclerView.Adapter<CardAdapter1.ViewHolder> 
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_card_view2, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_card_view1, parent, false);
         ViewHolder viewHolder = new ViewHolder(v);
         return viewHolder;
     }////////////////////////////////////////////////////////////////////////////////////////initiate views for layout files
@@ -50,6 +53,17 @@ public class CardAdapter1 extends RecyclerView.Adapter<CardAdapter1.ViewHolder> 
             holder.textViewName1.setText(obj.getTitle());
             holder.textViewName2.setText(obj.getpPublishedAt());
 
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent newintent = new Intent();
+                    newintent.setClass(context,Desc.class);
+                    newintent.putExtra("geturlnews", obj.getUral());
+                    context.startActivity(newintent);
+                    Toast.makeText(context,obj.getUral() , Toast.LENGTH_SHORT).show();
+
+                }
+            });
         }catch(Exception e){
         }
     }

@@ -78,15 +78,14 @@ public class World extends Fragment {
         });
         MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest5);
 
-        String url1 = "https://newsapi.org/v1/articles?source=national-geographic&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
-        JsonObjectRequest jsObjRequest1 = new JsonObjectRequest(Request.Method.GET, url1, null, new Response.Listener<JSONObject>() {
+        String url15 = "https://newsapi.org/v1/articles?source=time&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest15 = new JsonObjectRequest(Request.Method.GET, url15, null, new Response.Listener<JSONObject>() {
             JSONObject o;
 
             @Override
             public void onResponse(JSONObject response) {
                 o = response;
                 praseJsonNewsData0(o);
-
                 // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
             }
         }, new Response.ErrorListener() {
@@ -97,72 +96,10 @@ public class World extends Fragment {
 
             }
         });
-        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest1);
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest15);
 
-        String url3 = "https://newsapi.org/v1/articles?source=reddit-r-all&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
-        JsonObjectRequest jsObjRequest3 = new JsonObjectRequest(Request.Method.GET, url3, null, new Response.Listener<JSONObject>() {
-            JSONObject o;
 
-            @Override
-            public void onResponse(JSONObject response) {
-                o = response;
-                praseJsonNewsData0(o);
-
-                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
-            }
-        }, new Response.ErrorListener() {
-
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                // TODO Auto-generated method stub
-
-            }
-        });
-        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest3);
-
-        String url4 = "https://newsapi.org/v1/articles?source=the-lad-bible&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
-        JsonObjectRequest jsObjRequest4 = new JsonObjectRequest(Request.Method.GET, url4, null, new Response.Listener<JSONObject>() {
-            JSONObject o;
-
-            @Override
-            public void onResponse(JSONObject response) {
-                o = response;
-                praseJsonNewsData0(o);
-
-                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
-            }
-        }, new Response.ErrorListener() {
-
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                // TODO Auto-generated method stub
-
-            }
-        });
-        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest4);
-
-        String url6 = "https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
-        JsonObjectRequest jsObjRequest6 = new JsonObjectRequest(Request.Method.GET, url6, null, new Response.Listener<JSONObject>() {
-            JSONObject o;
-
-            @Override
-            public void onResponse(JSONObject response) {
-                o = response;
-                praseJsonNewsData0(o);
-
-                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
-            }
-        }, new Response.ErrorListener() {
-
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                // TODO Auto-generated method stub
-
-            }
-        });
-        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest6);
-
-        String url7 = "https://newsapi.org/v1/articles?source=wired-de&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        String url7 = "https://newsapi.org/v1/articles?source=the-washington-post&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
         JsonObjectRequest jsObjRequest7 = new JsonObjectRequest(Request.Method.GET, url7, null, new Response.Listener<JSONObject>() {
             JSONObject o;
 
@@ -170,7 +107,6 @@ public class World extends Fragment {
             public void onResponse(JSONObject response) {
                 o = response;
                 praseJsonNewsData0(o);
-
                 // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
             }
         }, new Response.ErrorListener() {
@@ -182,6 +118,293 @@ public class World extends Fragment {
             }
         });
         MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest7);
+
+        String url8 = "https://newsapi.org/v1/articles?source=the-wall-street-journal&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest8 = new JsonObjectRequest(Request.Method.GET, url8, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest8);
+
+        String url81 = "https://newsapi.org/v1/articles?source=the-guardian-au&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest81 = new JsonObjectRequest(Request.Method.GET, url81, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest81);
+
+        String url82 = "https://newsapi.org/v1/articles?source=the-economist&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest82 = new JsonObjectRequest(Request.Method.GET, url82, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest82);
+
+        String url83 = "https://newsapi.org/v1/articles?source=sky-news&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest83 = new JsonObjectRequest(Request.Method.GET, url83, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest83);
+
+        String url84 = "https://newsapi.org/v1/articles?source=newsweek&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest84 = new JsonObjectRequest(Request.Method.GET, url84, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest84);
+
+        String url842 = "https://newsapi.org/v1/articles?source=mirror&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest842 = new JsonObjectRequest(Request.Method.GET, url842, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest842);
+
+
+        String url841 = "https://newsapi.org/v1/articles?source=metro&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest841 = new JsonObjectRequest(Request.Method.GET, url841, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest841);
+
+
+        String url8411 = " https://newsapi.org/v1/articles?source=gruenderszene&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest8411 = new JsonObjectRequest(Request.Method.GET, url8411, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest8411);
+
+
+        String url8414 = "https://newsapi.org/v1/articles?source=fortune&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest8414 = new JsonObjectRequest(Request.Method.GET, url8414, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest8414);
+
+
+        String url84131 = "https://newsapi.org/v1/articles?source=financial-times&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest84131 = new JsonObjectRequest(Request.Method.GET, url84131, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest84131);
+
+
+        String url8417 = "https://newsapi.org/v1/articles?source=daily-mail&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest8417 = new JsonObjectRequest(Request.Method.GET, url8417, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest8417);
+
+        String url89 = "https://newsapi.org/v1/articles?source=cnbc&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest89 = new JsonObjectRequest(Request.Method.GET, url89, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest89);
+
+
+        String url891 = "https://newsapi.org/v1/articles?source=bloomberg&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest891 = new JsonObjectRequest(Request.Method.GET, url891, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest891);
+
+
+        String url8911 = " https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest8911 = new JsonObjectRequest(Request.Method.GET, url8911, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest8911);
 
 
     }

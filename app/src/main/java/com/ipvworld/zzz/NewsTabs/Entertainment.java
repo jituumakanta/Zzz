@@ -59,7 +59,7 @@ public class Entertainment extends Fragment {
     public void getTrndingNews0() {
         //uploading = ProgressDialog.show(getActivity(), "Loading", "Please wait...", false, false);
 
-       
+
         String url8 = "https://newsapi.org/v1/articles?source=the-hindu&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
         JsonObjectRequest jsObjRequest8 = new JsonObjectRequest(Request.Method.GET, url8, null, new Response.Listener<JSONObject>() {
             JSONObject o;
@@ -80,6 +80,90 @@ public class Entertainment extends Fragment {
             }
         });
         MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest8);
+
+
+        String url5 = "https://newsapi.org/v1/articles?source=entertainment-weekly&sortBy=top&apiKey=deefb5dee51948a0a57217651cb54c47";
+        JsonObjectRequest jsObjRequest5 = new JsonObjectRequest(Request.Method.GET, url5, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest5);
+
+        String url51 = "https://newsapi.org/v1/articles?source=mtv-news&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest51 = new JsonObjectRequest(Request.Method.GET, url51, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest51);
+
+        String url511 = "https://newsapi.org/v1/articles?source=ign&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest511 = new JsonObjectRequest(Request.Method.GET, url511, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest511);
+
+
+        String url52 = " https://newsapi.org/v1/articles?source=associated-press&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        JsonObjectRequest jsObjRequest52 = new JsonObjectRequest(Request.Method.GET, url52, null, new Response.Listener<JSONObject>() {
+            JSONObject o;
+
+            @Override
+            public void onResponse(JSONObject response) {
+                o = response;
+                praseJsonNewsData0(o);
+                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest52);
+
+
     }
 
     public void praseJsonNewsData0(JSONObject o) {
