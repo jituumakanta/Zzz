@@ -15,12 +15,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.ipvworld.zzz.NewsTabs.five;
-import com.ipvworld.zzz.NewsTabs.four;
+import com.ipvworld.zzz.NewsTabs.Technoloy;
+import com.ipvworld.zzz.NewsTabs.Sports;
 import com.ipvworld.zzz.NewsTabs.Trending;
-import com.ipvworld.zzz.NewsTabs.seven;
-import com.ipvworld.zzz.NewsTabs.six;
-import com.ipvworld.zzz.NewsTabs.three;
+import com.ipvworld.zzz.NewsTabs.India;
+import com.ipvworld.zzz.NewsTabs.World;
+import com.ipvworld.zzz.NewsTabs.Entertainment;
 import com.ipvworld.zzz.NewsTabs.Movie;
 import com.ipvworld.zzz.R;
 
@@ -136,15 +136,15 @@ public class MainActivity extends AppCompatActivity
                 case 0:
                     return new Trending();
                 case 1:
-                    return new seven();
+                    return new India();
                 case 2:
-                    return new three();
+                    return new Entertainment();
                 case 3:
-                    return new four();
+                    return new Sports();
                 case 4:
-                    return new five();
+                    return new Technoloy();
                 case 5:
-                    return new six();
+                    return new World();
                 case 6:
                     return new Movie();
             }
@@ -164,15 +164,15 @@ public class MainActivity extends AppCompatActivity
                 case 0:
                     return "Treding";
                 case 1:
-                    return "test";
+                    return "India";
                 case 2:
-                    return "Sports";
-                case 3:
-                    return "Technoloy";
-                case 4:
-                    return "World";
-                case 5:
                     return "Entertainment";
+                case 3:
+                    return "Sports";
+                case 4:
+                    return "Technology";
+                case 5:
+                    return "World";
                 case 6:
                     return "Movie";
 

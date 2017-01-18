@@ -1,5 +1,6 @@
 package com.ipvworld.zzz.NewsTabs;
 
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,6 +15,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.ipvworld.zzz.Adapter.CardAdapter1;
+import com.ipvworld.zzz.Adapter.CardAdapter2;
 import com.ipvworld.zzz.LayoutDesign.DividerItemDecoration;
 import com.ipvworld.zzz.BeanClass.ListItem;
 import com.ipvworld.zzz.Main.MySingleton;
@@ -26,7 +28,11 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class seven extends Fragment {
+
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class World extends Fragment {
 
     RecyclerView recyclerView0;
     RecyclerView.LayoutManager layoutManager0;

@@ -1,6 +1,5 @@
 package com.ipvworld.zzz.NewsTabs;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,7 +14,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.ipvworld.zzz.Adapter.CardAdapter1;
-import com.ipvworld.zzz.Adapter.CardAdapter2;
 import com.ipvworld.zzz.LayoutDesign.DividerItemDecoration;
 import com.ipvworld.zzz.BeanClass.ListItem;
 import com.ipvworld.zzz.Main.MySingleton;
@@ -28,11 +26,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
-public class three extends Fragment {
+public class India extends Fragment {
 
     RecyclerView recyclerView0;
     RecyclerView.LayoutManager layoutManager0;
@@ -58,7 +52,7 @@ public class three extends Fragment {
 
     public void getTrndingNews0() {
         //uploading = ProgressDialog.show(getActivity(), "Loading", "Please wait...", false, false);
-        String url5 = "https://newsapi.org/v1/articles?source=associated-press&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        String url5 = "https://newsapi.org/v1/articles?source=ars-technica&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
         JsonObjectRequest jsObjRequest5 = new JsonObjectRequest(Request.Method.GET, url5, null, new Response.Listener<JSONObject>() {
             JSONObject o;
 
@@ -78,7 +72,7 @@ public class three extends Fragment {
         });
         MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest5);
 
-        String url1 = "https://newsapi.org/v1/articles?source=abc-news-au&sortBy=top&apiKey=    41dbfb9f7c854533ab8ac78c91b664ed";
+        String url1 = "https://newsapi.org/v1/articles?source=national-geographic&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
         JsonObjectRequest jsObjRequest1 = new JsonObjectRequest(Request.Method.GET, url1, null, new Response.Listener<JSONObject>() {
             JSONObject o;
 
@@ -99,7 +93,7 @@ public class three extends Fragment {
         });
         MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest1);
 
-        String url3 = "https://newsapi.org/v1/articles?source=engadget&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        String url3 = "https://newsapi.org/v1/articles?source=reddit-r-all&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
         JsonObjectRequest jsObjRequest3 = new JsonObjectRequest(Request.Method.GET, url3, null, new Response.Listener<JSONObject>() {
             JSONObject o;
 
@@ -120,7 +114,7 @@ public class three extends Fragment {
         });
         MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest3);
 
-        String url4 = "https://newsapi.org/v1/articles?source=entertainment-weekly&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        String url4 = "https://newsapi.org/v1/articles?source=the-lad-bible&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
         JsonObjectRequest jsObjRequest4 = new JsonObjectRequest(Request.Method.GET, url4, null, new Response.Listener<JSONObject>() {
             JSONObject o;
 
@@ -141,7 +135,7 @@ public class three extends Fragment {
         });
         MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest4);
 
-        String url6 = "https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        String url6 = "https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
         JsonObjectRequest jsObjRequest6 = new JsonObjectRequest(Request.Method.GET, url6, null, new Response.Listener<JSONObject>() {
             JSONObject o;
 
@@ -162,7 +156,7 @@ public class three extends Fragment {
         });
         MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest6);
 
-        String url7 = "https://newsapi.org/v1/articles?source=reuters&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
+        String url7 = "https://newsapi.org/v1/articles?source=wired-de&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
         JsonObjectRequest jsObjRequest7 = new JsonObjectRequest(Request.Method.GET, url7, null, new Response.Listener<JSONObject>() {
             JSONObject o;
 
@@ -183,26 +177,7 @@ public class three extends Fragment {
         });
         MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest7);
 
-        String url8 = "https://newsapi.org/v1/articles?source=the-hindu&sortBy=top&apiKey=41dbfb9f7c854533ab8ac78c91b664ed";
-        JsonObjectRequest jsObjRequest8 = new JsonObjectRequest(Request.Method.GET, url8, null, new Response.Listener<JSONObject>() {
-            JSONObject o;
 
-            @Override
-            public void onResponse(JSONObject response) {
-                o = response;
-                praseJsonNewsData0(o);
-
-                // Toast.makeText(getApplicationContext(),""+o,Toast.LENGTH_LONG).show();
-            }
-        }, new Response.ErrorListener() {
-
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                // TODO Auto-generated method stub
-
-            }
-        });
-        MySingleton.getInstance(getActivity()).addToRequestQueue(jsObjRequest8);
     }
 
     public void praseJsonNewsData0(JSONObject o) {
@@ -246,4 +221,3 @@ public class three extends Fragment {
     }
 
 }
-

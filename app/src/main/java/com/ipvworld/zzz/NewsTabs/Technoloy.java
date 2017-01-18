@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class five extends Fragment {
+public class Technoloy extends Fragment {
 
     RecyclerView recyclerView0;
     RecyclerView.LayoutManager layoutManager0;
